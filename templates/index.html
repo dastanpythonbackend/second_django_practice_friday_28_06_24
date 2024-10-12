@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block header %}
+<h1>Latest news</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="{% url 'news_portal' %}">News portal</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+{% for i in latest_news %}
+<h1>{{i}}</h1>
+<p>{{i.news_text}}</p>
+<p>{{i.date_of_publication}}</p>
+{% endfor %}
+{% endblock %}
+{% block footer %}
+{% endblock %}

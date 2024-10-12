@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Detail{% endblock %}
+
+{% block header %}
+<h1>News detail</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="{% url 'news_portal' %}">News portal</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>{{news_detail.news_headline}}</h1>
+<p>{{news_detail.news_text}}</p>
+<p>{{news_detail.date_of_publication}}</p>
+{% endblock %}
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}Motorsport{% endblock %}
+
+{% block header %}
+<h1>Motorsport</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="{% url 'news_portal' %}">News portal</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+{% for news in motorsport %}
+<h1>{{news.news_headline}}</h1>
+<p>{{news.news_text}}</p>
+<p>{{news.date_of_publication}}</p>
+{% endfor %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
